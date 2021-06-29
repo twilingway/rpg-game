@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "RPG Game",
   "scripts": {
-    "lint": "npx eslint src/**/*.js"
+    "lint": "npx eslint src/**/*.js",
+    "prettier": "npx prettier --write ."
   },
   "repository": {
     "type": "git",
