@@ -1,0 +1,23 @@
+{
+  "name": "ZarMaraphonJSPro",
+  "version": "1.0.0",
+  "description": "RPG Game",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twilingway/rpg-game.git"
+  },
+  "author": "Aleksei Glazunov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/twilingway/rpg-game/issues"
+  },
+  "homepage": "https://github.com/twilingway/rpg-game#readme",
+  "devDependencies": {
+    "webpack": "^5.41.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
