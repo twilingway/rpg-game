@@ -6,6 +6,7 @@ coverage
 **/*.js
 
 !src/**/*.js
+!scripts/**/*.js
 
 !webpack.config.js
 
