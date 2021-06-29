@@ -7,6 +7,8 @@ coverage
 
 !src/**/*.js
 
+!webpack.config.js
+
 *.md
 
 *.json

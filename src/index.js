@@ -1,3 +1,3 @@
-console.log('### Init :>> ');
+import './index.scss';
 
-const test = 10;
+console.log('### Init :>> ');
