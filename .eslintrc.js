@@ -9,7 +9,6 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    'linebreak-style': ['error', 'unix'],
-    indent: ['error', 2],
+    'linebreak-style': ['error', 'unix'],   
   },
 };
