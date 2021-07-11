@@ -13,8 +13,8 @@ const shots = 3;
 let cycle = 0;
 let bottomPressed = false;
 const speed = 10;
-const areaW = 600;
-const areaH = 600;
+const areaW = canvas.width;
+const areaH = canvas.height;
 let pX = (areaW - spriteW) / 2;
 let pY = (areaH - spriteH) / 2;
 let sY = 0;
@@ -42,26 +42,26 @@ function keyDownHandler(event) {
   switch (event.key) {
     case 'down':
     case 'ArrowDown':
-      sY = 0;
+      sY = spriteH * 0;
       direction = 'down';
       break;
     case 'up':
     case 'ArrowUp':
-      sY = 144;
+      sY = spriteH * 2;
       direction = 'up';
       break;
     case 'left':
     case 'ArrowLeft':
-      sY = 48;
+      sY = spriteH * 1;
       direction = 'left';
       break;
     case 'right':
     case 'ArrowRight':
-      sY = 96;
+      sY = spriteH * 2;
       direction = 'right';
       break;
     default:
-      sY = 0;
+      sY = spriteH * 0;
       direction = '';
       break;
   }
