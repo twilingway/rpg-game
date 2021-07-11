@@ -1,14 +1,47 @@
+import ClientGame from './client/ClientGame';
 import './index.scss';
-import SenseiWalk from './assets/Male-1-Walk.png';
-import Heart from './assets/heart.png';
 
-const canvas = /** @type {HTMLCanvasElement} */ (
-  document.getElementById('game')
-);
-const ctx = canvas.getContext('2d');
+window.addEventListener('load', () => {
+  ClientGame.init({ tagId: 'game' });
+});
 
-const spriteW = 48;
-const spriteH = 48;
+// import SenseiWalk from './assets/Male-1-Walk.png';
+// import Heart from './assets/heart.png';
+// import terrainAtlas from './assets/terrain.png';
+// import worldCfg from './config/world.json';
+// import sprites from './config/sprites';
+
+// const canvas = /** @type {HTMLCanvasElement} */ (
+//   document.getElementById('game')
+// );
+// const ctx = canvas.getContext('2d');
+
+// const spriteW = 48;
+// const spriteH = 48;
+
+// const terrain = document.createElement('img');
+// terrain.src = terrainAtlas;
+
+// terrain.addEventListener('load', () => {
+//   const { map } = worldCfg;
+//   map.forEach((cfgRow, y) => {
+//     cfgRow.forEach((cfgCell, x) => {
+//       const [sX, sY, sW, sH] = sprites.terrain[cfgCell[0]].frames[0];
+//       ctx.drawImage(
+//         terrain,
+//         sX,
+//         sY,
+//         sW,
+//         sH,
+//         x * spriteW,
+//         y * spriteH,
+//         spriteW,
+//         spriteH,
+//       );
+//     });
+//   });
+// });
+/*
 const shots = 3;
 let cycle = 0;
 let bottomPressed = false;
@@ -147,20 +180,23 @@ function move(direct) {
 }
 respawn(4);
 
-img.addEventListener('load', () => {
-  setInterval(() => {
-    if (bottomPressed) {
-      move(direction);
-      cycle = (cycle + 1) % shots;
-    }
+function walk(timestamp) {
+  if (bottomPressed) {
+    move(direction);
+    cycle = (cycle + 1) % shots;
+  }
+  ctx.clearRect(0, 0, 600, 600);
+  drowGrid();
+  items.forEach((i) => {
+    ctx.drawImage(heart, 0, 0, 920, 920, i.x, i.y, 50, 50);
+  });
+  ctx.drawImage(img, cycle * spriteW, sY, spriteW, spriteH, pX, pY, 48, 48);
 
-    ctx.clearRect(0, 0, 600, 600);
-    drowGrid();
-    items.forEach((i) => {
-      ctx.drawImage(heart, 0, 0, 920, 920, i.x, i.y, 50, 50);
-    });
-    ctx.drawImage(img, cycle * spriteW, sY, spriteW, spriteH, pX, pY, 48, 48);
-  }, 120);
+  window.requestAnimationFrame(walk);
+}
+
+img.addEventListener('load', () => {
+  window.requestAnimationFrame(walk);
 });
 
-console.log('### Init :>> ');
+*/
