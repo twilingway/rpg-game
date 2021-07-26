@@ -2,6 +2,7 @@ import EventSourceMixin from './EventSourceMixin';
 
 class PositionedObject {
   constructor(cfg) {
+    this.x = 0;
     Object.assign(
       this,
       {
