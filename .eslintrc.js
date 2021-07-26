@@ -9,6 +9,16 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    'linebreak-style': ['error', 'unix'],   
+    'linebreak-style': ['error', 'unix'],
+    'object-curly-newline': ['off', {
+      ObjectExpression: 'always',
+      ObjectPattern: { 'multiline': true,  },
+      ImportDeclaration: 'never',
+      consistent: true,
+      ExportDeclaration: {
+        multiline: false,
+        minProperties: 3,
+      },
+    }],
   },
 };

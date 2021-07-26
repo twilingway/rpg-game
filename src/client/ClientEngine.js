@@ -2,6 +2,8 @@
 /* eslint-disable guard-for-in */
 
 import EventSourceMixin from '../common/EventSourceMixin';
+import ClientCamera from './ClientCamera';
+import ClientInput from './ClientInput';
 
 /* eslint-disable no-restricted-syntax */
 class ClientEngine {
@@ -12,6 +14,8 @@ class ClientEngine {
       imageLoaders: [],
       sprites: {},
       images: {},
+      camera: new ClientCamera({ canvas, engine: this }),
+      input: new ClientInput(canvas),
     });
 
     this.ctx = canvas.getContext('2d');
